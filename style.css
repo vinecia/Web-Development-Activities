@@ -1,0 +1,25 @@
+body {
+  font-family:Calibri;
+}
+.div1 {
+  margin: auto;
+  height: 210px;
+  width: 710px;
+  padding: 10px;
+}
+.div2 {
+  float: left;
+}
+.div3 {
+  float: right;
+}
+.label1 {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  font-weight: bold;
+}
+input{
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}

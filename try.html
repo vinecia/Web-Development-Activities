@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="addtoDatabase.php" method="post">
+        <label for="OrderNumber">Order Number: </label><input type="text" id="ordernum" name="OrderNumber" value="0000001" size="10" maxlength="7" readonly />
+        <input type="submit" name="submit" value="Submit" onclick="submitted()"/>
+        <!-- <button onclick="submitted()">Submit</button> -->
+    </form>
+    <script type="text/javascript">
+      function submitted(){
+        //alert('Done!');
+        var onum = document.getElementById("ordernum").value;
+        var order = parseInt(onum);
+        order++;
+        var orderS = order.toString();
+        var i;
+        var neworder = orderS;
+        if (orderS.length<7)
+        {
+          var zero =  7 - orderS.length;
+          for (i=0; i<zero; i++){
+              neworder = "0" + neworder;
+          }
+        }
+        document.getElementById("ordernum").value = neworder;
+      }
+    </script>
+
+  </body>
+</html>
