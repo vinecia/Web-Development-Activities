@@ -1,0 +1,539 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.container
+{
+	width: 100%;
+	min-height: 100vh;
+	padding-left: 8%;
+	padding-right: 8%;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+/*
+*	For The Logo and Website Name
+*/
+
+.navbar
+{
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.navbar h2
+{
+	font-size: 30px;
+	color: #009ffd;
+	margin-left: 3px;
+}
+
+.logo
+{
+	width: 50px;
+	cursor: pointer;
+	margin: 30px 0;
+}
+
+/*
+*	For The Burger Type Menu Logo
+*/
+
+.menu-icon
+{
+	width: 25px;
+	cursor: pointer;
+	display: none;
+}
+
+/*
+*	For The Navigation Bar
+*/
+
+nav
+{
+	flex: 1;
+	text-align: right;
+}
+
+nav ul li
+{
+	list-style: none;
+	display: inline-block;
+	margin-right: 30px;
+}
+
+nav ul li a
+{
+	text-decoration: none;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+nav ul li a:hover
+{
+	color: #009ffd;
+}
+
+@media only screen and (max-width: 720px)
+{
+	nav ul
+	{
+		width: 100%;
+		background: #009ffd;
+		position: absolute;
+		top: 90px;
+		right: 0;
+		z-index: 2;
+	}
+
+	nav ul li
+	{
+		display: block;
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+
+	nav ul li a
+	{
+		color: white;
+		margin-right: 15px;
+	}
+
+	nav ul li a:hover
+	{
+		font-size: 2vh;
+		color: white;
+	}
+
+	.menu-icon
+	{
+		display: block;
+	}
+
+	#menuList
+	{
+		overflow: hidden;
+		transition: 0.7s;
+	}
+}
+
+
+.row
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 3.5%;
+	flex-basis: 90%;
+}
+
+.col-1
+{
+	flex-basis: 30%;
+	position: relative;
+	margin-left: 10%;
+}
+
+.col-1 h2
+{
+	font-size: 60px;
+	color: #009ffd;
+}
+
+.col-1::after
+{
+	content: '';
+	width: 10px;
+	height: 80%;
+	background: #009ffd;
+	position: absolute;
+	left: -30px;
+	top: 8px;
+}
+
+.col-2a
+{
+/*	position: relative;
+	flex-basis: 70%;
+	margin-left: 5%;
+	padding: 30px;
+	height: 100000px;
+	-webkit-font-smoothing: antialiased;*/
+	position: relative;
+	flex-basis:  70%;
+	margin-left: 5%;
+	min-height: 450px;
+	height: 450px;
+}
+
+.col-2
+{
+	position: relative;
+	display: flex;
+	flex-basis: 70%;
+	margin-left: 5%;
+	flex-direction: column;
+	padding: 30px;
+	/*overflow: hidden;*/
+}
+
+@media only screen and (max-width: 700px)
+{
+	.row, .twt_placeholder, .fb
+	{
+		flex-direction: column;
+	}
+
+	.col-2a
+	{
+		flex-basis: 100%;
+		width: 100%;
+		height: 450px;
+		margin-top: 30px;
+	}
+
+	.col-2
+	{
+		flex-basis: 100%;
+	}
+
+}
+
+.twt_placeholder
+{
+	position: relative;
+	margin-top: 40px;
+	width: 100%;
+	text-align: center;
+}
+
+.twitter
+{
+	width:100%;
+	height:300px;
+	text-align: center;
+}
+
+.fb
+{
+	position: relative;
+	text-align: center;
+	margin-top: 280px;
+}
+
+/*
+*	For Bookmarks Page
+*/
+.buttongroup
+{
+		width: 215px;
+		margin: 2px;
+		position: relative;
+		background: #99ccff;
+		border-radius: 9px 9px 1px 1px;
+		float: left;
+}
+
+.toggle
+{
+	padding: 1% 1%;/*6px 7px;*/
+	cursor: pointer;
+	font-size: 22px;
+	font-weight: bold;
+	color: white;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+
+#btn
+{
+	top: 10;
+	left: 0;
+	position: absolute;
+	width: 59%;
+	height: 100%;
+	background: #009ffd;
+	border-radius: 8px 8px 1px 1px;
+	transition: 0.5s;
+}
+
+/*
+*	For Table in Bookmarks Page
+*/
+
+table
+{
+	width: 100%;
+	flex-basis: 100%;
+}
+
+tbody td
+{
+	padding: 16px;
+	width: 100%;
+	border-radius: 10px 10px 10px 10px;
+}
+
+table tr:nth-child(odd) td
+{
+	background: #dedddd;
+}
+
+table tr:nth-child(even) td
+{
+	background: #e9e8e8;
+}
+
+table h3
+{
+	font-weight: bold;
+}
+
+table p
+{
+	font-weight: lighter;
+}
+
+#bookmark
+{
+	left: 50px;
+}
+
+#history
+{
+	left: 450px;
+}
+
+/*
+*	For My Account Page
+*/
+
+.hero
+{
+	height: 100%;
+	width: 100%;
+	overflow: scroll;
+	background: #009ffd;
+}
+
+.formbox
+{
+	width: 500px;
+	height: 580px;
+	position: relative;
+	margin: 6% auto;
+	background: #fff;
+	padding: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 20px 1px #000000;
+	border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px)
+{
+	.formbox
+	{
+		width: 85%;
+		height: 580px;
+	}
+
+	#login
+	{
+		left: 60px;
+	}
+
+	#register
+	{
+		left: 510px;
+	}
+}
+
+.formbox2
+{
+	width: 300px;
+	height: 370px;
+	margin: 2% auto;
+	padding: 5px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px
+}
+
+.logomid
+{
+	margin: 11px auto;
+	text-align: center;
+}
+
+.logomid img
+{
+	width: 70px;
+}
+
+.buttonbox
+{
+	width: 220px;
+	margin: 20px auto;
+	position: relative;
+	box-shadow: 0 0 10px 2px #999999;
+	border-radius: 30px
+}
+
+.togglebtn
+{
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+
+#btn1
+{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: #009ffd;
+	border-radius: 30px;
+	transition: .5s;
+}
+
+#btn2
+{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: #009ffd;
+	border-radius: 30px;
+	transition: .5s;
+}
+
+#btn3
+{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 114px;
+	height: 100%;
+	background: #009ffd;
+	border-radius: 8px 8px 1px 1px;
+	transition: .5s;
+}
+
+.inputgroup
+{
+	top: 180px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+}
+
+.inputgroup2
+{
+	top: 60px;
+	position: absolute;
+	width: 250px;
+	transition: .5s;
+}
+
+.inputfield
+{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+
+.inputfield2
+{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+
+.submitbtn
+{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	background: #009ffd;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+
+.checkbox
+{
+	margin: 30px 10px 30px 0;
+}
+
+span
+{
+	color: #777;
+	font-size: 14px;
+	bottom: 60px;
+	position: absolute;
+}
+
+#login
+{
+	left: 110px;
+}
+
+#register
+{
+	left: 610px;
+}
+
+#user
+{
+	left: 10px;
+}
+
+#admin
+{
+	left: 610px;
+}
+
+/*
+*	For Footer of the Page
+*/
+
+#footer
+{
+	position: relative;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+  height: 20px;
+	padding: 20px;
+	margin-top: 5px;
+}
